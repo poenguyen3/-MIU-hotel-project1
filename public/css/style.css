@@ -1190,59 +1190,49 @@ noscript {
     display: none !important;
   }
 }
+@font-face {
+  font-family: 'garamond';
+  src: url('../fonts/EBGaramond.otf');
+}
 #container {
-  margin: 0 auto;
-  width: 980px;
+  width: 100%;
+  height: 100%;
+  background: #cccccc;
 }
-#header .logo {
-  font-size: 30px;
-  opacity: 0.5;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-#header nav {
-  margin: 5px 0;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px;
+#header {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 20px;
+  background-color: #001757;
+  background-color: rgba(0, 23, 87, 0.42);
+  text-align: center;
 }
-#header nav:before,
-#header nav:after {
-  display: table;
-  content: "";
+#header * {
+  font-family: 'garamond';
 }
-#header nav:after {
-  clear: both;
+#header ul.menu {
+  margin-top: 8px;
 }
-#header nav:before,
-#header nav:after {
-  display: table;
-  content: "";
+#header ul.menu li {
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'garamon';
 }
-#header nav:after {
-  clear: both;
+#header ul.menu li a {
+  color: #ffffff;
+  transition: all 0.1s ease-in-out;
 }
-#header nav li {
-  float: left;
-  position: relative;
-  display: block;
-}
-#header nav li a {
-  padding: 5px;
-}
-#header nav .active a {
-  color: gray;
-}
-#main {
-  margin: 5px 0;
-  padding: 10px;
-  min-height: 500px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px;
-}
-#footer {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  box-shadow: 0 1px 1px;
+#header ul.menu li a:hover {
+  color: #e1bc4d;
 }

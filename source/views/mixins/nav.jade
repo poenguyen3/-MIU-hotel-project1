@@ -1,5 +1,5 @@
-mixin nav(items)
-  ul
+mixin nav(items, className)
+  ul(class=className)
     each item, key in items
       - var active = ''
       - if (key === menuIndex) active = 'active'
