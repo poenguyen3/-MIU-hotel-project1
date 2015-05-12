@@ -1,0 +1,47 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -menuIndex = 0
+
+block container
+  #home-slider.about
+    .slider-container(data-home-slider)
+      .slide(data-url="images/home-slider/slide1.jpg")
+        .capture Authentic Caml Seas Cuisine
+      .slide(data-url="images/home-slider/slide2.jpg")
+        .capture Authentic Caml Seas Cuisine 2
+      .slide(data-url="images/home-slider/slide3.jpg")
+        .capture Authentic Caml Seas Cuisine 3
+  #content-container.about
+    h1.title INTRODUCE
+    .content.have-scroll.mCustomScrollbar.scrollbar-on-right
+      p.
+        As its name, Calm Seas Hotel with 3 stars standard is located along the beach of Nha Trang city that you can enjoy the romantic view of  Nha Trang beach. 
+        With a 17-storey building of the impressive modern architect, the hotel offers 72 well- appointed room that vary from standard to deluxe room, each room has windows/balcony distaning to the beach.
+      p Especially, Calm Seas Restaurant was at the 13th floor with the poetic viewwhere we can serve many local specialties as well as European andAsian dishes for breakfast, lunch, dinner from the expericened chief cook. Our restaurant is always available for you to enjoy the Vietnamese cuisineand Nha Trang specialties.
+      p In addition, many useful amenities including foot massage, car pick – up, ticketing service, laundry service, coffee boutique, souvenir shop...always bring you the greatest amenities. 
+      p The difference at our hotel is the staff, you will always see smilingfaces, friendly, enthusiastic, reliable at all services during your stayat Calm Seas Hotel.
+      p Honor to serve you !
+      h1 WHY YOU’LL LOVE IT
+      p.small-title 1.Calm Seas's décor 
+      ul.plus-sign
+        li Furnished balconies with panoramic views of Nha Trang beach 
+        li Open bedroom with cozy sitting area 
+        li Full bathroom with vanity, deep soaking tub  
+      p.small-title 2.Perfect location  
+      ul.plus-sign
+        li Close to mall, several restaurants, spa/salons, super market... 
+        li Quiet and peaceful setting in the heart of the city 
+      p.small-title 3.Value for money   
+      ul.plus-sign
+        li Modern and comfortable room 
+        li Great price for long term guest. For stay from 3 nights up, weoffer complimentary 1 way airport transfer and discount on massage services as well
+      p.small-title 4.Amazing food    
+      ul.plus-sign
+        li Vietnamese cuisine and Nha Trang specialties
+      p.small-title 5.Unexpected extras     
+      ul.plus-sign
+        li Complimentary high speed internet access 
+        li Copying, faxing, printing, typing service or even translating service are alwaysavailable 

@@ -1,0 +1,17 @@
+extends layouts/layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -menuIndex = 0
+
+block container
+  #home-slider.homepage
+    .slider-container(data-home-slider)
+      .slide(data-url="images/home-slider/slide1.jpg")
+        .capture Authentic Caml Seas Cuisine
+      .slide(data-url="images/home-slider/slide2.jpg")
+        .capture Authentic Caml Seas Cuisine 2
+      .slide(data-url="images/home-slider/slide3.jpg")
+        .capture Authentic Caml Seas Cuisine 3
+
