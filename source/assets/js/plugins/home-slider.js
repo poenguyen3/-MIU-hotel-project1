@@ -53,11 +53,36 @@
     this.element.append(overlay);
   };
 
+  var readyForFadeEffect = function(){
+    var self = this,
+        slideInd = 0;
+
+    this.element.find('.slide').css({
+      'z-index': '1'
+    }).each(function(){
+      var _this = $(this),
+          imgUrl = _this.data('url');
+      _this.css({
+        'background-image': 'url(' + imgUrl + ')',
+        'background-position': 'center center',
+        'background-size': 'cover',
+        'background-repeat': 'no-repeat'
+      });
+      _this.addClass('sl-' + slideInd);
+      self.blahs.slideCls.push('sl-' + slideInd);
+      slideInd++;
+    });
+
+    this.blahs.maxSlide = this.element.find('.slide').length;
+
+  };
+
   var initEffectRequiredElement = function() {
     var elem = this.element,
         blahs = this.blahs;
     switch (this.options.effect.type) {
-      case 'blur':  readyForBlurEffect.call(this);break;      
+      case 'blur':  readyForBlurEffect.call(this);break;
+      case 'fade':  readyForFadeEffect.call(this);break;
       default:
     }
     elem.find('.slide').hide();
@@ -91,10 +116,31 @@
 
   };
 
+  var fadeToSlide = function(ind) {
+    var elem = this.element,
+        blahs = this.blahs,
+        duration = this.options.effect.duration,
+        overlay = elem.find('.overlay'),
+        targetSlide = null, curSlideElem = null;
+
+    console.log('fading');
+    curSlideElem = elem.find('.slide.' + blahs.curSlideCls);
+    blahs.curSlide = ind;
+    blahs.curSlideCls = blahs.slideCls[blahs.curSlide];
+    targetSlide = elem.find('.slide.' + blahs.curSlideCls);
+
+    curSlideElem.fadeOut(duration);
+    targetSlide.fadeIn(duration);
+
+  };
+
   var gotoSlide = function(ind) {
     switch (this.options.effect.type) {
       case 'blur':
         blurToSlide.call(this, ind);
+        break;
+      case 'fade':
+        fadeToSlide.call(this, ind);
         break;
       default:
     }
@@ -187,8 +233,8 @@
   $.fn[pluginName].defaults = {
     key: 'value',
     effect: {
-      type: 'blur',
-      duration: 500
+      type: 'fade',
+      duration: 700
     },
     autoPlay: true,
     autoPlayPeriod: 2500,
