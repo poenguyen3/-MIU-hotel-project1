@@ -1,0 +1,29 @@
+#booking-widget
+	.wg-btn Booking now
+	.booking-form
+		h3.til Check Availability and Rates
+		p.des Please complete the details below
+		.inputs-wrap
+			.input-wrap.full
+				.label Check in date
+				input(type="date")
+			.input-wrap.full
+				.label Check out date
+				input(type="date")
+			.input-wrap.haft.left
+				.label Room
+				select
+					option(value="", selected) 1
+			.input-wrap.haft.right
+				.label Adult
+				select
+					option(value="", selected) 0
+			.input-wrap.haft
+				.label Children (0-12)
+				select
+					option(value="", selected) 0
+			.clear
+			.input-wrap.full
+				input(type="submit", value="CONTINUE")
+		.close-btn
+include check-available-calendar

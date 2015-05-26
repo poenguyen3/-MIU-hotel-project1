@@ -1,0 +1,148 @@
+// Responsive
+// Resolutions variables
+@screen-desktop: 1200px;
+@screen-landTab: 1024px;
+@screen-portTab: 900px;
+@screen-ipad: 768px;
+@screen-smartphone: 720px;
+@screen-firstgen: 480px;
+@screen-lowers: 320px;
+
+@custom-tab: 960px;
+@custom-tab1: 680px;
+@custom-tab2: 640px;
+@custom-mobile: 480px;
+@custom-mobile1: 600px;
+
+@custom-tab-height: 600px;
+
+
+@media screen and (max-height: @custom-tab-height) {
+	
+}
+
+@media screen and (max-width: @custom-tab) {
+	
+}
+
+
+@media screen	and (max-width: @custom-tab2) {
+	#booking-steps-nav {
+		.step {
+			font-size: 0.6rem;
+		}
+	}
+
+	#booking-check-avai-form {
+		width: 100%;
+		height: auto;
+		padding: 8px;
+		text-align: center;
+		table {
+			tr {
+				&.for-mobile {
+					display: table-row;
+				}
+			}
+			td {
+				&.for-desk {
+				 display: none;
+				}
+			}
+		}
+	}
+
+	#available-calendar-widget {
+	  .calendar-wrap {
+	  	.calendar-month-picker {
+	  		.month {
+	  			.full {
+	  				display: none;
+	  			}
+	  			.short {
+	  				display: block;
+	  				padding-top: 20%;
+	  				.name {
+	  					font-size: 0.8em;
+	  				}
+	  				.year {
+	  					font-size: 0.7em;
+	  				}
+	  			}
+	  		}
+	  	}
+	    .calendar-date-title {
+	      .day {
+	      	.short {display: block}
+	      	.full {display: none}
+	      }
+	     }
+	     .calendar-days-wrap {
+		    .day {
+		      .cont {
+		      	.info {
+		      	  .pre-unit {display: none;}
+		      	  .unit.full {display: none;}
+		      	  .unit.short {display: inline;}
+		      	}
+		      }
+		    }
+		   }
+	   }
+	   
+	}
+}
+
+@media screen and (max-width: @custom-mobile1) {
+	
+}
+
+@media screen and (max-width: @custom-mobile) {
+	#booking-steps-nav {
+		.step {
+			font-size: 0.5rem;
+		}
+	}
+
+	.hide-on-mobile {
+		display: none !important;
+	}
+	#available-calendar-widget {
+	  .calendar-wrap {
+	  	.calendar-month-picker {
+	  	}
+	     .calendar-days-wrap {
+		    .day {
+		    	.num {
+		    		font-size: 0.7em;
+		    	}
+		      .cont {
+		      	.info {
+		      	  height: 18px;
+		      	  &.avai-rooms {
+		      	  	height: 14px;
+		      	  	line-height: 8px;
+		      	  }
+		      	  span {
+			          font-size: 0.8em;
+
+		      	  }
+		      	}
+		      }
+		      .note {
+		      	padding: 8px 2px;
+		      	font-size: 0.8em;
+		      	text-align: center;
+		      	span {
+		      		display: block;
+		      		margin: auto;
+		      	}
+		      }
+		    }
+		   }
+	   }
+	}
+
+}
+
+

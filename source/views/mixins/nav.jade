@@ -3,7 +3,7 @@ mixin nav(items, className)
     each item, key in items
       - var active = ''
       - if (key === menuIndex) active = 'active'
-      li(class=active)
+      li(class=active, style=item.style)
         +link(item.title, item.href, item.text)(class=item.class)
         - if (typeof(item.itemsMenu) !== 'undefined'){
           +nav(item.itemsMenu)

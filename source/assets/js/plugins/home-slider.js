@@ -88,6 +88,9 @@
     elem.find('.slide').hide();
     elem.find('.slide:first').show();
     blahs.curSlideCls = blahs.slideCls[blahs.curSlide];
+
+    // initiate navigation
+
   };
 
   // go-to-slide functions for each effect
@@ -208,7 +211,15 @@
       if (this.options.autoPlay) {
         startAutoplay.call(this);
       }
+
       // add events
+      that.element
+      .find('.arrow.prev').on('click', function(){
+        prevSlide.call(that);
+      }).end()
+      .find('.arrow.next').on('click', function(){
+        nextSlide.call(that);
+      });
     },
     destroy: function() {
       // deinitialize

@@ -1,6 +1,56 @@
 header#header
-  .outer
-    #logo
-    .inner
-      #sub-header
-      #main-header
+  #logo
+  #sub-header
+    .contact.contact-phone
+      span +1 
+      span - 125 
+      span - 458 
+      span - 587 
+    .contact.contact-social
+      a(href="#").facebook
+      a(href="#").twitter
+    .lang-sel
+      .selected EN
+      .selector 
+        +nav([
+          {href: "javascript:void(0)", title: "EN"},
+          {href: "javascript:void(0)", title: "VI"}
+        ])
+    .addition-nav
+      +nav([
+        {href: "#", title: "Gallery"},
+        {href: "#", title: "Contact"},
+        {href: "#", title: "Recruitment"}
+      ])
+  #main-header
+    .left-nav.nav
+      +nav([
+        {href: "#", title: "ABOUT US"},
+        {href: "#", title: "FACILITIES"},
+        {href: "#", title: "ACCOMMODATION"}
+      ])
+    .right-nav.nav
+      +nav([
+        {href: "#", title: "NEWS", style: "width: 90px"},
+        {href: "#", title: "RESTAURANT & BAR", style: "width: 150px"},
+        {href: "#", title: "SPECIAL OFFERS"}
+      ])
+    .mobile-nav
+      .switch-btn
+#mobile-nav-content
+  .inner 
+    +nav([
+      {href: "#", title: "NEWS"},
+      {href: "#", title: "RESTAURANT & BAR"},
+      {href: "#", title : "SPECIAL OFFERS"},
+      {href: "#", title: "ABOUT US"},
+      {href: "#", title: "FACILITIES"},
+      {href: "#", title: "ACCOMMODATION"}
+    ])
+    .add-nav
+      +nav([
+        {href: "#", title: "Gallery"},
+        {href: "#", title: "Contact"},
+        {href: "#", title: "Recruitment"}
+      ])(class="add-nav")
+

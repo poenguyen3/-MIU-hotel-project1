@@ -1,0 +1,153 @@
+#available-calendar-widget
+	.container-center
+		.calendar-wrap
+			.calendar-month-picker
+				.month.active
+					.full
+						.name May
+						.year 2015
+					.short
+						.name May
+						.year 2015
+				.month
+					.full
+						.name June
+						.year 2015
+					.short
+						.name June
+						.year 2015
+				.month
+					.full
+						.name July
+						.year 2015
+					.short
+						.name July
+						.year 2015
+				.month
+					.full
+						.name August
+						.year 2015
+					.short
+						.name Aug
+						.year 2015
+				.month
+					.full
+						.name September
+						.year 2015
+					.short
+						.name Sep
+						.year 2015
+				.month
+					.full
+						.name October
+						.year 2015
+					.short
+						.name Oct
+						.year 2015
+				.month
+					.full
+						.name November
+						.year 2015
+					.short
+						.name Nov
+						.year 2015
+			.calendar-date-title
+				.day 
+					.full Sunday
+					.short Sun
+				.day 
+					.full Monday
+					.short Mon
+				.day 
+					.full Tuesday
+					.short Tues
+				.day 
+					.full Wednesday
+					.short Wed
+				.day 
+					.full Thursday
+					.short Thu
+				.day 
+					.full Friday
+					.short Fri
+				.day 
+					.full Saturday
+					.short Sat
+			.calendar-days-wrap
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.num 00
+				-var n = 0
+				while n < 31
+					.day.in-month
+						.num= n++
+						.cont
+							.info.price
+								span.pre-unit USD
+								span.value 82.99
+								span.unit.all $
+							if n < 6 || n > 27
+								.info.avai-rooms.no-room
+									span.value no
+									span.unit.full 
+										i.fa.fa-key 
+										span available
+									span.unit.short 
+										i.fa.fa-key
+							else
+								.info.avai-rooms
+									span.value 5
+									span.unit.full 
+										i.fa.fa-key 
+										span available
+									span.unit.short 
+										i.fa.fa-key
+				-var n = 0
+				while n < 28
+					.day.in-month
+						.num= n++ + "/06"
+						.cont
+							.info.price
+								span.pre-unit USD
+								span.value 82.99
+								span.unit.all $
+							if n < 6 || n > 27
+								.info.avai-rooms.no-room
+									span.value no
+									span.unit.full 
+										i.fa.fa-key 
+										span available
+									span.unit.short 
+										i.fa.fa-key
+							else
+								.info.avai-rooms
+									span.value 5
+									span.unit.full 
+										i.fa.fa-key 
+										span available
+									span.unit.short 
+										i.fa.fa-key
+
+
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.num 00
+				.day
+					.note 
+						i.fa.fa-key 
+						span.hide-on-mobile -
+						span room
+				.clear
+		div(style="clear: both")

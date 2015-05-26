@@ -1,0 +1,68 @@
+extends layouts/booking-layout
+
+block vars
+  -title = 'Homepage'
+  -bodyClass = 'home'
+  -menuIndex = 0
+
+block container
+  #booking-check-avai-form
+   table
+    tbody
+     tr
+      td.label Check-in
+      td.label Check-out
+      td.label.for-desk Rooms
+      td.label.for-desk Adults
+      td.label.for-desk Children
+     tr
+      td.field
+       label
+        input(type="date")
+        .right-i
+         i.fa.fa-calendar
+      td.field
+       label
+        input(type="date")
+        .right-i
+         i.fa.fa-calendar
+      td.field.for-desk
+       select
+        option 1
+        option 2
+        option 3
+      td.field.for-desk
+       select
+        option 1
+        option 2
+        option 3
+      td.field.for-desk
+       select
+        option 1
+        option 2
+        option 3
+     table
+      tr.for-mobile
+       td.label Rooms
+       td.label Adults
+       td.label Children
+      tr.for-mobile
+       td.field
+        select
+         option 1
+         option 2
+         option 3
+       td.field
+        select
+         option 1
+         option 2
+         option 3
+       td.field
+        select
+         option 1
+         option 2
+         option 3
+       
+
+  include blocks/booking-check-available-calendar
+
